@@ -14,3 +14,9 @@ Feature: pokus
     Given nastaveni pocatecnich podminek
     When toto je calsi akce
     Then dalsi overeni vysledku
+
+
+  Scenario: Kalkulacka - soucet dvou cisel
+    Given Uzivatel ma zadany dve cisla 5 a 8
+    When Uzivatel secte tato dve cisla
+    Then Uzivatel vidi na kalkulacce vysledek 13
