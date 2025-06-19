@@ -34,5 +34,5 @@ Feature: pokus
     Examples:
       | prvniCislo | druheCislo | vysledek |
       | 120        | 24         | 144      |
-      | 1011       | 10         | 1021     |
+      | 1011       | 10         | 1020     |
       | 0          | -24        | -24      |
