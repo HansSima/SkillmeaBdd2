@@ -1,6 +1,10 @@
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import product.BankAccount;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BankTest {
 
@@ -13,6 +17,14 @@ public class BankTest {
 
     @Then("A user account balance is {int} kc")
     public void aUserAccountBalanceIsKc(int expectedBalance) {
+        assertEquals(expectedBalance, firstBankAccount.getAccountBalance());
+    }
 
+    @When("A user withdraw {int} kc")
+    public void aUserWithdrawKc(int arg0) {
+    }
+
+    @And("A user transfer {int} kc to this account")
+    public void aUserTransferKcToThisAccount(int arg0) {
     }
 }
