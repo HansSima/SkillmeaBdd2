@@ -20,3 +20,19 @@ Feature: pokus
     Given Uzivatel ma zadany dve cisla 5 a 8
     When Uzivatel secte tato dve cisla
     Then Uzivatel vidi na kalkulacce vysledek 13
+
+  Scenario: Kalkulacka - deleni dvou cisel
+    Given Uzivatel ma zadany dve cisla 15 a 5
+    When Uzivatel vydeli tato dve cisla
+    Then Uzivatel vidi na kalkulacce vysledek 3
+
+  Scenario Outline: Kalkulacka - scitani vice scenaru
+    Given Uzivatel ma zadany dve cisla <prvniCislo> a <druheCislo>
+    When Uzivatel secte tato dve cisla
+    Then Uzivatel vidi na kalkulacce vysledek <vysledek>
+
+    Examples:
+      | prvniCislo | druheCislo | vysledek |
+      | 120        | 24         | 144      |
+      | 1011       | 10         | 1021     |
+      | 0          | -24        | -24      |
