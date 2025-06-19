@@ -32,3 +32,9 @@ Feature: Bank
 
   ##################################################################################
 
+  Scenario: Multiple bank account transfer
+    Given Bank account with 1000 kc
+    And another Bank account with 2000 kc
+    When A user transfer from first bank account to second one 500 kc
+    Then A user account balance is 500 kc
+    And A user second account balance is 2500 kc
